@@ -1,6 +1,6 @@
 
 <div class="row">
-    <div *ngIf="isAdmin">
+    <div *ngIf="isAdmin && userID == 10">
         <app-admin></app-admin>
     </div>
     <div *ngIf="userID < 8 && isLoggedIn">

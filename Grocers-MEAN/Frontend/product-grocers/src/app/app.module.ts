@@ -28,6 +28,7 @@ import { UserComponent } from './components/home-page/user/user.component';
 import { AdminComponent } from './components/home-page/admin/admin.component';
 import { EmployeeComponent } from './components/home-page/employee/employee.component';
 import { OrderStatusComponent } from './order-status/order-status.component';
+import { UpdateOrderComponent } from './update-order/update-order.component';
 
 
 
@@ -55,6 +56,7 @@ import { OrderStatusComponent } from './order-status/order-status.component';
     AdminComponent,
     EmployeeComponent,
     OrderStatusComponent,
+    UpdateOrderComponent,
 
   ],
   imports: [
@@ -75,14 +77,15 @@ import { OrderStatusComponent } from './order-status/order-status.component';
       {path: 'orders', component: OrderStatusComponent},
       {path: 'add-funds', component: AddFundsComponent},
       {path: 'login-page', component: LoginPageComponent},
+      {path: 'order-status', component: UpdateOrderComponent},
  
       
     
       {path: 'delete-employee', component: DeleteEmployeeComponent},
       
       
-      //{path: '/', redirectTo: '/login-page', pathMatch: 'full'}
-      // {path: 'home-page', component: HomePageComponent}
+      // {path: '/', redirectTo: '/login-page', pathMatch: 'full'},
+      {path: 'home-page', component: HomePageComponent}
       
 
     ]),
