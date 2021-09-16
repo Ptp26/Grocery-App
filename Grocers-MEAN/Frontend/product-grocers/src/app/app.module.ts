@@ -28,6 +28,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { UserComponent } from './components/home-page/user/user.component';
 import { AdminComponent } from './components/home-page/admin/admin.component';
 import { EmployeeComponent } from './components/home-page/employee/employee.component';
+import { OrderStatusComponent } from './order-status/order-status.component';
 
 
 
@@ -54,6 +55,7 @@ import { EmployeeComponent } from './components/home-page/employee/employee.comp
     UserComponent,
     AdminComponent,
     EmployeeComponent,
+    OrderStatusComponent,
 
   ],
   imports: [
