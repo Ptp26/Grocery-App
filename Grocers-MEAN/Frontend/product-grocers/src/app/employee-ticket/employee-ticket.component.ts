@@ -11,11 +11,11 @@ import { DomSanitizer } from '@angular/platform-browser'
 export class EmployeeTicketComponent implements OnInit {
 
   tickets:Ticket[] = [];
+  showTable:Boolean = false;
 
   constructor(public ticketSer:TicketService, public sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
-    this.showTicket();
   }
 
   unlockAccount(ticketID: any) {
@@ -26,6 +26,7 @@ export class EmployeeTicketComponent implements OnInit {
     this.ticketSer.getTickets()
       .subscribe(tickets => {
         this.tickets = tickets;
-      })
+      });
+      this.showTable=true;
   }
 }
