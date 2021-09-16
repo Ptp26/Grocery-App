@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status</title>
+</head>
+
+<body>
+    <input type="button" value="Show/Update Orders" class="btn-success" (click)="showOrders()" />
+    <table id="openOrders" class="table-bordered" *ngIf="showTable">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>User ID</th>
+                <th>Total</th>
+                <th>Current Status</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr *ngFor="let order of orders">
+                <td>{{order._id}}</td>
+                <td>{{order.userId}}</td>
+                <td>{{order.total}}</td>
+                <td>{{order.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form [formGroup]="orderRef" (ngSubmit)="updateOrder()">
+        <table>
+            <tr>
+                <td><label>Order ID</label></td>
+                <td><input type="text" formControlName="pid"></td>
+            </tr>
+            <tr>
+                <td><label>New Status</label></td>
+                <td><select class="form-select" formControlName="status">
+                    <option>Pending</option>
+                    <option value="Shipped">Shipped</option>
+                    <option value="Out For Delivery">Out For Delivery</option>
+                    <option value="Delivered">Delivered</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select></td>
+                <!-- <td><input type="text" formControlName="status"></td> -->
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" class="btn-primary"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
