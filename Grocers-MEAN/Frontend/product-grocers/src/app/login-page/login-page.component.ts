@@ -69,7 +69,7 @@ export class LoginPageComponent implements OnInit {
       else{
         localStorage.setItem("userId",JSON.stringify(id));
         sessionStorage.setItem("incorrectAttempts","0");
-        this.route.navigate(['/']);
+        this.route.navigate(['/home-page']);
       }
     },error=>console.log(error));
 

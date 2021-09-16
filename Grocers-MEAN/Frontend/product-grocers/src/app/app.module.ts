@@ -78,8 +78,8 @@ import { EmployeeComponent } from './components/home-page/employee/employee.comp
       {path: 'delete-employee', component: DeleteEmployeeComponent},
       
       
-      //{path: '/', redirectTo: '/login-page', pathMatch: 'full'}
-      // {path: 'home-page', component: HomePageComponent}
+      // {path: '/', redirectTo: '/login-page', pathMatch: 'full'},
+      {path: 'home-page', component: HomePageComponent}
       
 
     ]),
