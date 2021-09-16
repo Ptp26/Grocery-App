@@ -28,6 +28,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { UserComponent } from './components/home-page/user/user.component';
 import { AdminComponent } from './components/home-page/admin/admin.component';
 import { EmployeeComponent } from './components/home-page/employee/employee.component';
+import { UpdateOrderComponent } from './update-order/update-order.component';
 
 
 
@@ -54,6 +55,7 @@ import { EmployeeComponent } from './components/home-page/employee/employee.comp
     UserComponent,
     AdminComponent,
     EmployeeComponent,
+    UpdateOrderComponent,
 
   ],
   imports: [
@@ -72,6 +74,7 @@ import { EmployeeComponent } from './components/home-page/employee/employee.comp
       {path: 'send-requests', component: SendRequestComponent},
       {path: 'profile-info', component: ProfileInfoComponent},
       {path: 'login-page', component: LoginPageComponent},
+      {path: 'order-status', component: UpdateOrderComponent},
  
       
     
