@@ -30,6 +30,7 @@ import { EmployeeComponent } from './components/home-page/employee/employee.comp
 import { OrderStatusComponent } from './order-status/order-status.component';
 import { UpdateOrderComponent } from './update-order/update-order.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { GenerateReportsComponent } from './generate-reports/generate-reports.component';
 
 
 
@@ -58,7 +59,8 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
     EmployeeComponent,
     OrderStatusComponent,
     UpdateOrderComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    GenerateReportsComponent
 
   ],
   imports: [
@@ -85,6 +87,7 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
       
     
       {path: 'delete-employee', component: DeleteEmployeeComponent},
+      {path: 'generate-reports', component: GenerateReportsComponent},
       
       
       // {path: '/', redirectTo: '/login-page', pathMatch: 'full'},
