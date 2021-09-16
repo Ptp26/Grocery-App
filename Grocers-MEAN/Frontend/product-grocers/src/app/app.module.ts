@@ -29,6 +29,7 @@ import { AdminComponent } from './components/home-page/admin/admin.component';
 import { EmployeeComponent } from './components/home-page/employee/employee.component';
 import { OrderStatusComponent } from './order-status/order-status.component';
 import { UpdateOrderComponent } from './update-order/update-order.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
 
 
 
@@ -57,6 +58,7 @@ import { UpdateOrderComponent } from './update-order/update-order.component';
     EmployeeComponent,
     OrderStatusComponent,
     UpdateOrderComponent,
+    AddEmployeeComponent
 
   ],
   imports: [
@@ -78,6 +80,7 @@ import { UpdateOrderComponent } from './update-order/update-order.component';
       {path: 'add-funds', component: AddFundsComponent},
       {path: 'login-page', component: LoginPageComponent},
       {path: 'order-status', component: UpdateOrderComponent},
+      {path : 'add-employee' , component : AddEmployeeComponent},
  
       
     
