@@ -56,7 +56,4 @@ export class UserService {
     return this.http.put("http://localhost:9090/user/addFunds", userRef, { responseType: 'text' })
   }
 
-
-
-
 }
