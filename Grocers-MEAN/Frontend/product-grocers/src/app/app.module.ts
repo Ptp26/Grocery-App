@@ -28,6 +28,7 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { UserComponent } from './components/home-page/user/user.component';
 import { AdminComponent } from './components/home-page/admin/admin.component';
 import { EmployeeComponent } from './components/home-page/employee/employee.component';
+import { CartComponent } from './cart/cart.component';
 
 
 
@@ -54,13 +55,14 @@ import { EmployeeComponent } from './components/home-page/employee/employee.comp
     UserComponent,
     AdminComponent,
     EmployeeComponent,
+    CartComponent,
 
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {
-        path: '', pathMatch: 'full', redirectTo: 'login-page'
+        path: '', pathMatch: 'full', redirectTo: 'home-page'
       },
       {path: 'retrieve-products', component: RetrieveProductsComponent},
       {path: 'add-product', component: AddProductComponent},
@@ -72,6 +74,9 @@ import { EmployeeComponent } from './components/home-page/employee/employee.comp
       {path: 'send-requests', component: SendRequestComponent},
       {path: 'profile-info', component: ProfileInfoComponent},
       {path: 'login-page', component: LoginPageComponent},
+      {path: 'user', component: UserComponent},
+      {path: 'cart', component: CartComponent},
+      {path: 'home-page', component: HomePageComponent},
  
       
     
@@ -85,9 +90,8 @@ import { EmployeeComponent } from './components/home-page/employee/employee.comp
     ]),
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    
-    
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
