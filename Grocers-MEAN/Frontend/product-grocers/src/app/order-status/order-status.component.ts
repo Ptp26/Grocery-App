@@ -10,7 +10,7 @@ export class OrderStatusComponent implements OnInit {
 
   name = 'Order Status';
   counts = ["pending","shipped","outfordelivery","delivered", "cancelled"];
-  orderStatus = "pending"
+  orderStatus = "pending";
   user?: any;
   userId = JSON.parse(localStorage.getItem('userId'));
   orders?:any;
@@ -19,7 +19,7 @@ export class OrderStatusComponent implements OnInit {
   
   ngOnInit(): void {
     this.getUser(this.userId)
-    console.log(this.userId)
+    console.log(this.userId);
   }
 
   getUser(id: any) {

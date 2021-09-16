@@ -22,8 +22,7 @@ import { RetrieveProductsComponent } from './product-components/retrieve-product
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavComponent } from './shared/nav/nav.component';
-import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
-// import { AddFundsComponent } from './add-funds/add-funds.component';
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component'; import { AddFundsComponent } from './add-funds/add-funds.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { UserComponent } from './components/home-page/user/user.component';
 import { AdminComponent } from './components/home-page/admin/admin.component';
@@ -73,6 +72,8 @@ import { OrderStatusComponent } from './order-status/order-status.component';
       {path: 'view-requests', component: ViewRequestsComponent},
       {path: 'send-requests', component: SendRequestComponent},
       {path: 'profile-info', component: ProfileInfoComponent},
+      {path: 'orders', component: OrderStatusComponent},
+      {path: 'add-funds', component: AddFundsComponent},
       {path: 'login-page', component: LoginPageComponent},
  
       
