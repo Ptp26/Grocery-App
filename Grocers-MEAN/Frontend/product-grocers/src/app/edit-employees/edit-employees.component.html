@@ -3,6 +3,10 @@
     <form #employeeRef="ngForm" (ngSubmit)="changePassword(employeeRef.value)">
         <table>
             <tr>
+                <td><label>User ID</label></td>
+                <td><input type="text" name="userId" ngModel/><br/></td>
+            </tr>
+            <tr>
                 <td><label>Password</label></td>
                 <td><input type="password" name="password" ngModel/><br/></td>
             </tr>

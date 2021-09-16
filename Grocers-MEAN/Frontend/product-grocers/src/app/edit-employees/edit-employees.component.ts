@@ -14,20 +14,24 @@ export class EditEmployeesComponent implements OnInit {
   }  
 
   changePassword(employeeRef:any){
-    this.empSer.getEmployee(JSON.parse(localStorage.getItem("userId"))).subscribe(employee => {
-      let empId = employee[0]._id;
-      this.empSer.changePassword({_id: empId, password: employeeRef.password}).subscribe(result => {
-        console.log(result)
-      });
-    })
-  }
-
-  getEmployee(id:any){
-    this.empSer.getEmployee(id).subscribe(result => {
-      console.log(result);
-      this.employee = result[0];
+    // this.empSer.getEmployee(JSON.parse(localStorage.getItem("userId"))).subscribe(employee => {
+    //   let empId = employee[0]._id;
+    //   console.log(empId);
+    //   this.empSer.changePassword({_id: empId, password: employeeRef.password}).subscribe(result => {
+    //     console.log(result)
+    //   });
+    // })
+    this.empSer.changePassword({_id: employeeRef.userId, password: employeeRef.password}).subscribe(result => {
+      console.log(result)
     });
   }
+
+  // getEmployee(id:any){
+  //   this.empSer.getEmployee(id).subscribe(result => {
+  //     console.log(result);
+  //     this.employee = result[0];
+  //   });
+  // }
   
 
   
