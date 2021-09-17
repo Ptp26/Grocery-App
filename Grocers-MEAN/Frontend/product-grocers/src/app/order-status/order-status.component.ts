@@ -9,8 +9,9 @@ import { UserService } from '../services/user.service';
 export class OrderStatusComponent implements OnInit {
 
   name = 'Order Status';
-  counts = ["pending","shipped","outfordelivery","delivered", "cancelled"];
-  orderStatus = "pending";
+  //counts = ["pending","shipped","out for delivery","delivered", "cancelled"];
+  //orderStatus = "pending"
+  recentOrder?:any;
   user?: any;
   userId = JSON.parse(localStorage.getItem('userId'));
   orders?:any;
@@ -26,9 +27,12 @@ export class OrderStatusComponent implements OnInit {
     this.userService.retrieveUserById(id).subscribe(result => {
       console.log(result);
       this.orders = result[0].orders;
+      console.log(this.orders);
       //sort array to get most recent purschase
       this.orders.sort((a:any,b:any)=>{return  <any>new Date(b.date) - <any>new Date(a.date)});
-      this.orderStatus = this.orders[0].status;
+      this.recentOrder = this.orders[0];
+      //this.orderStatus = this.orders[0].status;
+      //console.log(this.orderStatus);
     })
   }
   
