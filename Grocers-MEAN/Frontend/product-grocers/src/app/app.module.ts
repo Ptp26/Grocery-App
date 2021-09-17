@@ -22,17 +22,23 @@ import { RetrieveProductsComponent } from './product-components/retrieve-product
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavComponent } from './shared/nav/nav.component';
-import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component';
-// import { AddFundsComponent } from './add-funds/add-funds.component';
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component'; import { AddFundsComponent } from './add-funds/add-funds.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { UserComponent } from './components/home-page/user/user.component';
 import { AdminComponent } from './components/home-page/admin/admin.component';
 import { EmployeeComponent } from './components/home-page/employee/employee.component';
+<<<<<<< HEAD
 import { CartComponent } from './cart/cart.component';
 import { StoreItemsComponent } from './cart/store-items/store-items.component';
 import { DeleteItemsComponent } from './cart/delete-items/delete-items.component';
 import { UpdateQuantityComponent } from './cart/update-quantity/update-quantity.component';
 import { ViewItemsComponent } from './cart/view-items/view-items.component';
+=======
+import { OrderStatusComponent } from './order-status/order-status.component';
+import { UpdateOrderComponent } from './update-order/update-order.component';
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { GenerateReportsComponent } from './generate-reports/generate-reports.component';
+>>>>>>> b8367af1f490731b0ba44e6da5dd3977f9bec94f
 
 
 
@@ -59,11 +65,18 @@ import { ViewItemsComponent } from './cart/view-items/view-items.component';
     UserComponent,
     AdminComponent,
     EmployeeComponent,
+<<<<<<< HEAD
     CartComponent,
     StoreItemsComponent,
     DeleteItemsComponent,
     UpdateQuantityComponent,
     ViewItemsComponent,
+=======
+    OrderStatusComponent,
+    UpdateOrderComponent,
+    AddEmployeeComponent,
+    GenerateReportsComponent
+>>>>>>> b8367af1f490731b0ba44e6da5dd3977f9bec94f
 
   ],
   imports: [
@@ -81,7 +94,10 @@ import { ViewItemsComponent } from './cart/view-items/view-items.component';
       {path: 'view-requests', component: ViewRequestsComponent},
       {path: 'send-requests', component: SendRequestComponent},
       {path: 'profile-info', component: ProfileInfoComponent},
+      {path: 'orders', component: OrderStatusComponent},
+      {path: 'add-funds', component: AddFundsComponent},
       {path: 'login-page', component: LoginPageComponent},
+<<<<<<< HEAD
       {path: 'user', component: UserComponent},
       {path: 'cart', component: CartComponent},
       {path: 'home-page', component: HomePageComponent},
@@ -89,14 +105,19 @@ import { ViewItemsComponent } from './cart/view-items/view-items.component';
       {path: 'delete-items', component: DeleteItemsComponent},
       {path: 'update-quantity', component: UpdateQuantityComponent},
       {path: 'view-items', component: ViewItemsComponent},
+=======
+      {path: 'order-status', component: UpdateOrderComponent},
+      {path : 'add-employee' , component : AddEmployeeComponent},
+>>>>>>> b8367af1f490731b0ba44e6da5dd3977f9bec94f
  
       
     
       {path: 'delete-employee', component: DeleteEmployeeComponent},
+      {path: 'generate-reports', component: GenerateReportsComponent},
       
       
-      //{path: '/', redirectTo: '/login-page', pathMatch: 'full'}
-      // {path: 'home-page', component: HomePageComponent}
+      // {path: '/', redirectTo: '/login-page', pathMatch: 'full'},
+      {path: 'home-page', component: HomePageComponent}
       
 
     ]),

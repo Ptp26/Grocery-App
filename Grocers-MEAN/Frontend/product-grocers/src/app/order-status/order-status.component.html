@@ -1,0 +1,30 @@
+
+<div>
+ <div class="container" *ngIf="this.orders.length !== 0">
+  <h3>{{ name}}</h3>
+ <label>Product: {{recentOrder.products[0].productName}}</label><br>
+ <label>Order Date: {{recentOrder.date}}</label><br>
+ <label>Status: {{recentOrder.status}}</label>
+ </div>
+ <br>
+
+ <div class="container" *ngIf="this.orders.length !== 0">
+  <h2>Order History</h2>
+   <table border="2">
+     <tr>
+       <th>ID</th>
+       <th>Total</th>
+       <th>Product</th>
+       <th>Date</th>
+       <th>Status</th>
+     </tr>
+     <tr *ngFor="let order of orders">
+       <td>{{order._id}}</td>
+       <td>{{order.total}}</td>
+       <td>{{order.products[0].productName}}</td>
+       <td>{{order.date}}</td>
+       <td>{{order.status}}</td>
+     </tr>
+   </table>
+ </div>
+</div>

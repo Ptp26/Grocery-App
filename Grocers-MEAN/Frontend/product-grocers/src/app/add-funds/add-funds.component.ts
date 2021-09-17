@@ -12,9 +12,18 @@ export class AddFundsComponent implements OnInit {
   constructor(public usrService: UserService, public route: Router) { }
 
   userId = JSON.parse(localStorage.getItem('userId'))
+  funds:Number;
   
   ngOnInit(): void {
     console.log(this.userId);
+    this.getUser(this.userId);
+  }
+
+  getUser(id: any) {
+    this.usrService.retrieveUserById(id).subscribe(result => {
+      console.log(result);
+      this.funds = result[0].funds;
+    })
   }
 
   addFunds(userRef:any){
