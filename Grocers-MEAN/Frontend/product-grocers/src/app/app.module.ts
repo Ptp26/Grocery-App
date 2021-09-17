@@ -22,7 +22,8 @@ import { RetrieveProductsComponent } from './product-components/retrieve-product
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavComponent } from './shared/nav/nav.component';
-import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component'; import { AddFundsComponent } from './add-funds/add-funds.component';
+import { DeleteEmployeeComponent } from './delete-employee/delete-employee.component'; 
+import { AddFundsComponent } from './add-funds/add-funds.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { UserComponent } from './components/home-page/user/user.component';
 import { AdminComponent } from './components/home-page/admin/admin.component';
@@ -36,7 +37,7 @@ import { OrderStatusComponent } from './order-status/order-status.component';
 import { UpdateOrderComponent } from './update-order/update-order.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { GenerateReportsComponent } from './generate-reports/generate-reports.component';
-
+import { RaiseTicketComponent } from './raise-ticket/raise-ticket.component';
 
 
 @NgModule({
@@ -70,7 +71,9 @@ import { GenerateReportsComponent } from './generate-reports/generate-reports.co
     OrderStatusComponent,
     UpdateOrderComponent,
     AddEmployeeComponent,
-    GenerateReportsComponent
+    GenerateReportsComponent,
+    AddFundsComponent,
+    RaiseTicketComponent
 
   ],
   imports: [
@@ -100,7 +103,7 @@ import { GenerateReportsComponent } from './generate-reports/generate-reports.co
       {path: 'view-items', component: ViewItemsComponent},
       {path: 'order-status', component: UpdateOrderComponent},
       {path : 'add-employee' , component : AddEmployeeComponent},
- 
+      {path : 'raise-ticket' , component : RaiseTicketComponent},
       
     
       {path: 'delete-employee', component: DeleteEmployeeComponent},
