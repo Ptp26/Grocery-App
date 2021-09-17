@@ -24,6 +24,34 @@ let getOrderById = (req,res)=> {
     })
 }
 
+
+let getOrderByUserId = (req,res)=> {
+    
+    let userId = req.params.userId;       //passing id through path param 
+    
+
+    OrderModel.find({_id:userId},(err,data)=> {
+        if(!err){
+            res.json(data);         // return array 
+            //res.json(data[0])     // return only one object 
+        }
+    })
+}
+
+let getOrderByCurrentDay = (req,res)=> {
+    
+    //let pid = req.params.pid;       //passing id through path param 
+    currentDay = new Date.toLocaleDateString()
+    OrderModel.find({date: new RegExp(currentDay)},(err,data)=> {
+        if(!err){ 
+            res.json(data);         // return array 
+            //res.json(data[0])     // return only one object 
+        }
+    })
+}
+
+
+
 let storeOrderDetails = (req,res)=> {
    
     let order = new OrderModel({
@@ -79,4 +107,4 @@ let updateOrderStatus= (req,res)=> {
 
 
 
-module.exports={getOrderDetails,getOrderById,storeOrderDetails,deleteOrderById,updateOrderStatus}
+module.exports={getOrderDetails,getOrderById, getOrderByUserId, getOrderByCurrentDay, storeOrderDetails,deleteOrderById,updateOrderStatus}

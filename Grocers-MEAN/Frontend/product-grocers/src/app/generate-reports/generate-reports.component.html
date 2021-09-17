@@ -1,0 +1,28 @@
+<div>
+    <h2>Generate Reports</h2>
+    <div>
+        <table border="1" class="table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Total</th>
+                    <th>UserID</th>
+                    <th>Status</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let o of orders">
+                    <td>{{o._id}}</td>
+                    <td>{{o.total}}</td>
+                    <td>{{o.userId}}</td>
+                    <td>{{o.status}}</td>
+                    
+                    
+                </tr>
+            </tbody>
+                
+    
+        </table>
+    </div>
+</div>
