@@ -1,0 +1,28 @@
+<div>
+    <h2>Delete Cart Item</h2>
+    <div>
+        <table border="1" class="table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">UserID</th>
+                    <th scope="col">ProductId</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">ImageUrl</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of cart">
+                        <td>{{c.userId}}</td>
+                        <td>{{c.productId}}</td>
+                        <td>{{c.name}}</td>
+                        <td>{{c.quantity}}</td>
+                        <td>{{c.imageUrl}}</td>
+                        <td><button class="btn btn-danger" (click)="deleteById(c.productId)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {{deleteMsg}}
+</div>

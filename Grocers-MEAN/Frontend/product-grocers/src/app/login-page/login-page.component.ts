@@ -30,8 +30,7 @@ export class LoginPageComponent implements OnInit {
 
     //if user -> send to user
     if(this.isLoggedIn){
-      this.route.navigate(['/home-page']);
-      
+      this.route.navigate(['/user']);
     }
     // else if(){
 

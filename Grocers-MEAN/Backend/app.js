@@ -35,6 +35,7 @@ var User = require("./router/user.router.js");
 var Employee = require("./router/employee.router.js");
 var Ticket = require("./router/ticket.router.js");
 var Request = require("./router/request.router.js");
+var Cart = require("./router/user-items.router");
 
 
 //URL 
@@ -54,6 +55,7 @@ app.use("/user", User)
 app.use("/employee", Employee)
 app.use("/ticket", Ticket)
 app.use("/request", Request)
+app.use("/cart", Cart)
 
 
 

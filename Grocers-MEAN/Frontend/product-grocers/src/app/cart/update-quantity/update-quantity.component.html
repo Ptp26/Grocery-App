@@ -1,0 +1,22 @@
+<div>
+    <h2>Update Product Using userId and productId</h2>
+    <form #cartRef="ngForm" (ngSubmit)="updateQuantity(cartRef.value)">
+        <table>
+            <tr>
+                <td><label>User Id</label></td>
+                <td><input type="text" name="userId" ngModel/><br/></td>
+            </tr>
+            <tr>
+                <td><label>Product Id</label></td>
+                <td><input type="text" name="productId" ngModel/><br/></td>
+            </tr>
+            <tr>
+                <td><label>Quantity</label></td>
+                <td><input type="text" name="quantity" ngModel/><br/></td>
+            </tr>
+        </table>
+
+        <input type="submit" class="btn btn-primary" value="Update Quantity"/>
+    </form>
+    {{updateMsg}}
+</div>

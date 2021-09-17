@@ -29,6 +29,10 @@ import { UserComponent } from './components/home-page/user/user.component';
 import { AdminComponent } from './components/home-page/admin/admin.component';
 import { EmployeeComponent } from './components/home-page/employee/employee.component';
 import { CartComponent } from './cart/cart.component';
+import { StoreItemsComponent } from './cart/store-items/store-items.component';
+import { DeleteItemsComponent } from './cart/delete-items/delete-items.component';
+import { UpdateQuantityComponent } from './cart/update-quantity/update-quantity.component';
+import { ViewItemsComponent } from './cart/view-items/view-items.component';
 
 
 
@@ -56,13 +60,17 @@ import { CartComponent } from './cart/cart.component';
     AdminComponent,
     EmployeeComponent,
     CartComponent,
+    StoreItemsComponent,
+    DeleteItemsComponent,
+    UpdateQuantityComponent,
+    ViewItemsComponent,
 
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {
-        path: '', pathMatch: 'full', redirectTo: 'home-page'
+        path: '', pathMatch: 'full', redirectTo: 'login-page'
       },
       {path: 'retrieve-products', component: RetrieveProductsComponent},
       {path: 'add-product', component: AddProductComponent},
@@ -77,6 +85,10 @@ import { CartComponent } from './cart/cart.component';
       {path: 'user', component: UserComponent},
       {path: 'cart', component: CartComponent},
       {path: 'home-page', component: HomePageComponent},
+      {path: 'store-items', component: StoreItemsComponent},
+      {path: 'delete-items', component: DeleteItemsComponent},
+      {path: 'update-quantity', component: UpdateQuantityComponent},
+      {path: 'view-items', component: ViewItemsComponent},
  
       
     
